@@ -2,6 +2,7 @@ package pe.edu.idat.app_retrofit_persistence.retrofit.api
 
 import pe.edu.idat.app_retrofit_persistence.retrofit.request.LoginRequest
 import pe.edu.idat.app_retrofit_persistence.retrofit.response.LoginResponse
+import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
@@ -11,7 +12,7 @@ interface PatitasRest {
 
     @POST("login.php")
     fun autenticacion(@Body loginRequest: LoginRequest):
-            LoginResponse
+            Call<LoginResponse>
 
     @GET("mascotas.php")
     fun getMascotas(): List<LoginResponse>

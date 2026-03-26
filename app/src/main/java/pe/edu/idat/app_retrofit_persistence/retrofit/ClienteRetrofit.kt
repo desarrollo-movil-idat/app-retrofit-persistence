@@ -2,6 +2,7 @@ package pe.edu.idat.app_retrofit_persistence.retrofit
 
 import okhttp3.OkHttpClient
 import pe.edu.idat.app_retrofit_persistence.retrofit.api.PatitasRest
+import pe.edu.idat.app_retrofit_persistence.util.Constantes
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
@@ -16,7 +17,7 @@ object ClienteRetrofit {
         .build()
     //Creación del objeto Retrofit
     private fun buildRetrofit() = Retrofit.Builder()
-        .baseUrl("")
+        .baseUrl(Constantes.URL_BASE_API)
         .client(okHttpClient)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
