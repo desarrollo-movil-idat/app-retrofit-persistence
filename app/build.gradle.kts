@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "pe.edu.idat.app_retrofit_persistence"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "pe.edu.idat.app_retrofit_persistence"
@@ -51,6 +51,7 @@ dependencies {
     //Retrofit
     implementation("com.squareup.retrofit2:retrofit:3.0.0")
     implementation("com.squareup.retrofit2:converter-gson:3.0.0")
+    implementation("com.airbnb.android:lottie:5.2.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
